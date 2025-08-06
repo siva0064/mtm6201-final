@@ -1,0 +1,42 @@
+/* Base Resets*/
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #222;
+    margin-bottom: 1rem;
+}
+/*Portfolio Card Styling*/
+.project-card {
+    border: var(--car-border-width) solid #ddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transition: box-shadow 0.3s ease;
+} 
+
+.project-card:hover {
+    transform: translate(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .project-card img{
+        height: 350px;
+    }
+}
+/*Profile Picture Border*/
+/*CSS Variables*/
+/*Media queries*/
+/*Utility Tweaks*/
+/*Section spacing*/
