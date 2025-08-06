@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5 {
 }
 /*Portfolio Card Styling*/
 .project-card {
-    border: var(--car-border-width) solid #ddd;
+    border: var(--card-border-width) solid #ddd;
     border-radius: 0.5rem;
     overflow: hidden;
     transition: transform 0.3s ease;
