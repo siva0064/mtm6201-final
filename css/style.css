@@ -30,10 +30,20 @@ h1, h2, h3, h4, h5 {
     object-fit: cover;
 }
 
+#portfolio .section-title {
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 @media (min-width: 768px) {
     .project-card img{
         height: 350px;
     }
+}
+/*Hero*/
+.min-vh-80{
+    min-height: 80vh
 }
 /* 3. Profile pic border */
 .profile-pic {
