@@ -1,79 +1,157 @@
-/* Base Resets*/
+/* General styles */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: sans-serif;
+    margin: 0;
 }
 
-h1, h2, h3, h4, h5 {
-    color: #222;
-    margin-bottom: 1rem;
-}
-/*Portfolio Card Styling*/
-.project-card {
-    border: var(--card-border-width) solid #ddd;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    transition: box-shadow 0.3s ease;
-} 
-
-.project-card:hover {
-    transform: translate(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+nav {
+    background-color: #333333;
+    padding: 10px;
+    text-align: center;
 }
 
-.project-card img {
-    display: block;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 50px);
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Contact page specific */
+.contact-page form {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-#portfolio .section-title {
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  font-weight: 600;
+.contact-page input, .contact-page textarea {
+    background-color: #555555;
+    border: none;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1em;
 }
 
-@media (min-width: 768px) {
-    .project-card img{
-        height: 350px;
-    }
-}
-/*Hero*/
-.min-vh-80{
-    min-height: 80vh
-}
-/* 3. Profile pic border */
-.profile-pic {
-  border: var(--card-border-width) solid #bbb;
+.contact-page input::placeholder, .contact-page textarea::placeholder {
+    color: #ffffff;
 }
 
-/* 4. CSS variables for border width (platform-based) */
-:root {
-  --card-border-width: 1px;
+.contact-page textarea {
+    height: 100px;
 }
 
-/* 5. Media queries: adjust border on larger screens */
-@media (min-width: 576px) {
-  :root { --card-border-width: 2px; }
-}
-@media (min-width: 992px) {
-  :root { --card-border-width: 3px; }
-}
-
-/* 6. Utility tweaks */
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+.contact-page button {
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    align-self: center;
 }
 
-/* 7. Section spacing overrides if needed */
-section#portfolio {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+/* Portfolio page specific */
+.portfolio-page .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.portfolio-page .column {
+    text-align: center;
+}
+
+.portfolio-page .column h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.portfolio-page .column p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.portfolio-page .column img {
+    width: 100%;
+    height: auto;
+}
+
+/* About page specific */
+.about-page .about-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+.about-page .images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-page .bottom-images {
+    display: flex;
+    gap: 10px;
+}
+
+.about-page .images img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+}
+
+.about-page .text h2 {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+}
+
+.about-page .text p {
+    font-size: 1em;
+    line-height: 1.5;
 }
