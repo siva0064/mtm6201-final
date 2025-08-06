@@ -35,8 +35,35 @@ h1, h2, h3, h4, h5 {
         height: 350px;
     }
 }
-/*Profile Picture Border*/
-/*CSS Variables*/
-/*Media queries*/
-/*Utility Tweaks*/
-/*Section spacing*/
+/* 3. Profile pic border */
+.profile-pic {
+  border: var(--card-border-width) solid #bbb;
+}
+
+/* 4. CSS variables for border width (platform-based) */
+:root {
+  --card-border-width: 1px;
+}
+
+/* 5. Media queries: adjust border on larger screens */
+@media (min-width: 576px) {
+  :root { --card-border-width: 2px; }
+}
+@media (min-width: 992px) {
+  :root { --card-border-width: 3px; }
+}
+
+/* 6. Utility tweaks */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* 7. Section spacing overrides if needed */
+section#portfolio {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
