@@ -1,4 +1,4 @@
-/* General styles */
+/* General Styles */
 body {
     background-color: #000000;
     color: #ffffff;
@@ -6,12 +6,12 @@ body {
     margin: 0;
 }
 
+/* Navigation */
 nav {
     background-color: #333333;
     padding: 10px;
     text-align: center;
 }
-
 nav ul {
     list-style: none;
     margin: 0;
@@ -20,43 +20,97 @@ nav ul {
     justify-content: center;
     gap: 20px;
 }
-
 nav a {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.2em;
 }
-
 nav a:hover {
     text-decoration: underline;
 }
 
+/* Container */
 .container {
+    padding: 20px;
+    min-height: calc(100vh - 50px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 50px);
-    padding: 20px;
 }
-
 header {
     text-align: center;
     margin-bottom: 20px;
 }
-
 header h1 {
     font-size: 3em;
     margin: 0;
+    text-transform: uppercase;
 }
-
 header p {
     font-size: 1.5em;
     margin: 10px 0;
 }
 
-/* Contact page specific */
-.contact-page form {
+/* Portfolio Page */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+.portfolio-container .column {
+    text-align: center;
+}
+.column h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+.column p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+.column img {
+    width: 100%;
+    height: auto;
+}
+
+/* About Page */
+.about-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+.images {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.bottom-images {
+    display: flex;
+    gap: 10px;
+}
+.images img {
+    width: 100%;
+    height: auto;
+}
+.text {
+    flex: 0 0 60%;
+}
+.text h2 {
+    font-size: 4em;
+    margin: 0 0 10px 0;
+}
+.text p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Contact Page */
+form {
     background-color: #333333;
     padding: 20px;
     border-radius: 10px;
@@ -66,24 +120,20 @@ header p {
     flex-direction: column;
     gap: 15px;
 }
-
-.contact-page input, .contact-page textarea {
+input, textarea {
     background-color: #555555;
     border: none;
     padding: 10px;
     color: #ffffff;
     font-size: 1em;
 }
-
-.contact-page input::placeholder, .contact-page textarea::placeholder {
-    color: #ffffff;
+input::placeholder, textarea::placeholder {
+    color: #cccccc;
 }
-
-.contact-page textarea {
+textarea {
     height: 100px;
 }
-
-.contact-page button {
+button {
     background-color: #ff6600;
     color: #ffffff;
     border: none;
@@ -91,67 +141,5 @@ header p {
     border-radius: 20px;
     font-size: 1em;
     cursor: pointer;
-    align-self: center;
-}
-
-/* Portfolio page specific */
-.portfolio-page .portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 100%;
-}
-
-.portfolio-page .column {
-    text-align: center;
-}
-
-.portfolio-page .column h2 {
-    font-size: 1.8em;
-    margin: 10px 0;
-}
-
-.portfolio-page .column p {
-    font-size: 1.2em;
-    margin: 5px 0;
-}
-
-.portfolio-page .column img {
-    width: 100%;
-    height: auto;
-}
-
-/* About page specific */
-.about-page .about-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    width: 100%;
-}
-
-.about-page .images {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.about-page .bottom-images {
-    display: flex;
-    gap: 10px;
-}
-
-.about-page .images img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #000000;
-}
-
-.about-page .text h2 {
-    font-size: 2em;
-    margin: 0 0 10px 0;
-}
-
-.about-page .text p {
-    font-size: 1em;
-    line-height: 1.5;
+    align-self: flex-end;
 }
